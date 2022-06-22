@@ -1,0 +1,91 @@
+.experience-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    .experience-frontend,
+    .experience-backend{
+        background: var(--color-bg-variant);
+        padding: 2.4rem 5rem;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        transition: var(--transition);
+
+        &:hover{
+            background: transparent;
+            border-color: var(--color-primary-variant);
+        }
+
+        h3{
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-primary);
+            background: none;
+            text-transform: capitalize;
+        }
+
+        .experience-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
+            background: none;
+
+            .experience-details{
+                display: flex;
+                gap: 1rem;
+                background: none;
+
+                .experience-icon{
+                    background: none;
+                    margin-top: 6px;
+                    color: var(--color-primary) !important;
+                }
+
+                div{
+                    background: none;
+
+                    h4{
+                        background: none;
+                        text-transform: uppercase;
+                    }
+
+                    .text-light{
+                        background: none;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media queries on tablet
+@media screen and (max-width: 1024px) {
+    .experience-container{
+        grid-template-columns: 1fr;
+
+        .experience-backend,
+        .experience-frontend{
+            width: 80%;
+            padding: 2rem;
+            margin: 0 auto;
+
+            .experience-content{
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+//media queries on phone
+@media screen and (max-width: 600px) {
+   .experience-container{
+    gap: 1rem;
+
+    .experience-backend,
+    .experience-frontend{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+   } 
+}

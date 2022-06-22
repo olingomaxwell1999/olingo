@@ -1,0 +1,92 @@
+.contact-container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+
+    .contact-options{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        .contact-option{
+            background: var(--color-bg-variant);
+            padding: 1.2rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                background: transparent;
+                border-color: var(--color-primary-variant);
+            }
+
+            .icon{
+                background: none;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h4{
+                background: none;
+                text-transform: capitalize;
+                font-size: 1.2rem;
+            }
+
+            h5{
+                background: none;
+                font-size: 0.7rem;
+            }
+
+            span {
+                background: none;
+                font-size: 0.7rem;
+            }
+
+            a{
+                background: none;
+                text-transform: capitalize;
+                margin-top: 0.7rem;
+                display: inline-block;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        input,
+        textarea{
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background: transparent;
+            border: 2px solid var(--color-primary-variant);
+            resize: none;
+            color: white;
+        }
+    }
+}
+
+//media queries on tablet
+@media screen and (max-width: 1024px) {
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+//media queries on phone
+@media screen and (max-width: 600px) {
+    .contact-container{
+        width: var(--container-width-sm);
+    }
+}
